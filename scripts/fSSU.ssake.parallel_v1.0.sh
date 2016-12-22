@@ -24,7 +24,7 @@ args="$n_reads $cov_min $overlap $minbase $baseratio $outfolder $contig_min $err
 ### Assembly ###
 find  $datafolder/ -name '*.fastq' |\
 sed -e "s/$/ $args/" |\
-parallel --progress -j90% 'sh scripts/fSSU.ssake.assemble_v1.0.bash'
+parallel --progress -j90% 'sh scripts/fSSU.ssake_v1.0.sh'
 
 ### Stats ###
 t2=$(date +%s.%N)
